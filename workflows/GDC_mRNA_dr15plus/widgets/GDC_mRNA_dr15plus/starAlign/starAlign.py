@@ -18,9 +18,9 @@ class OWstarAlign(OWBwBWidget):
     icon = getIconName(__file__,"staralign.png")
     want_main_area = False
     docker_image_name = "biodepot/star"
-    docker_image_tag = "2.4.0e-2.7.9a__debian-8.11-slim__36b899a1"
-    inputs = [("trigger",str,"handleInputstrigger"),("outputDir",str,"handleInputsoutputDir"),("genomeDir",str,"handleInputsgenomeDir"),("readFilesIn",str,"handleInputsreadFilesIn"),("sampleTrigger",str,"handleInputssampleTrigger"),("starVersion",str,"handleInputsstarVersion")]
-    outputs = [("outputDir",str),("genomeDir",str),("starVersion",str)]
+    docker_image_tag = "2.6.0c__debian-8.11-slim__072918"
+    inputs = [("trigger",str,"handleInputstrigger"),("outputDir",str,"handleInputsoutputDir"),("genomeDir",str,"handleInputsgenomeDir"),("readFilesIn",str,"handleInputsreadFilesIn"),("sampleTrigger",str,"handleInputssampleTrigger")]
+    outputs = [("outputDir",str),("genomeDir",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
     exportGraphics=pset(False)
@@ -146,7 +146,6 @@ class OWstarAlign(OWBwBWidget):
     multipleSample=pset(False)
     twopass1readsN =pset(-1)
     twopassMode=pset("")
-    starversion=pset(None)
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"starAlign")) as f:
@@ -180,11 +179,6 @@ class OWstarAlign(OWBwBWidget):
             self.handleInputs("sampleTrigger", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
-    def handleInputsstarVersion(self, value, *args):
-        if args and len(args) > 0: 
-            self.handleInputs("starVersion", value, args[0][0], test=args[0][3])
-        else:
-            self.handleInputs("inputFile", value, None, False)
     def handleOutputs(self):
         outputValue="/data"
         if hasattr(self,"outputDir"):
@@ -194,7 +188,3 @@ class OWstarAlign(OWBwBWidget):
         if hasattr(self,"genomeDir"):
             outputValue=getattr(self,"genomeDir")
         self.send("genomeDir", outputValue)
-        outputValue=None
-        if hasattr(self,"starVersion"):
-            outputValue=getattr(self,"starVersion")
-        self.send("starVersion", outputValue)
