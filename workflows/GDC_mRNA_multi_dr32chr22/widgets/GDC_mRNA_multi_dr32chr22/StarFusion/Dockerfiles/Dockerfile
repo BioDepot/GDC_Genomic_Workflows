@@ -1,7 +1,7 @@
 FROM debian:buster-slim
 Maintainer Ling-Hong Hung
 ENV DEBIAN_FRONTEND=noninteractive
-ENV STAR_FUSION_VERSION 1.4.0
+ENV STAR_FUSION_VERSION 1.9.0
 ENV SAMTOOLS_VERSION 1.9
 ENV HTSLIB_VERSION 1.9
 
@@ -14,9 +14,9 @@ RUN apt-get update && apt-get install -y libgomp1 libbz2-dev wget build-essentia
     && cd /root && rm -rf /samtools* \
     && wget -O - http://cpanmin.us | perl - --self-upgrade \
     && cpanm Data::Dumper FindBin DB_File URI::Escape Set::IntervalTree Carp::Assert JSON::XS PerlIO::gzip \
-    && wget -qO- https://github.com/STAR-Fusion/STAR-Fusion/releases/download/STAR-Fusion-v${STAR_FUSION_VERSION}/STAR-Fusion-v${STAR_FUSION_VERSION}.FULL.tar.gz \
+    && wget -qO- https://github.com/STAR-Fusion/STAR-Fusion/releases/download/STAR-Fusion-v${STAR_FUSION_VERSION}/STAR-Fusion.v${STAR_FUSION_VERSION}.FULL.tar.gz \
     | tar -xzvf - \
-    && mv STAR-Fusion-v${STAR_FUSION_VERSION} STAR-Fusion \
+    && mv STAR-Fusion.v${STAR_FUSION_VERSION} STAR-Fusion \
     && apt-get remove -y wget build-essential \
     && apt-get clean -y \
     && apt-get autoremove -y \
