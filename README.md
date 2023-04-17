@@ -12,6 +12,13 @@ https://www.youtube.com/watch?v=YzFa9Een7Tc
 ### GDC_mRNA_multi_dr32_fpkm
 GDC Data Release v32 mRNA-Seq workflow, as seen in Figure 2b.
 
+**NOTE**: STAR Fusion widget has been disabled as the default, as genome library directory files are not longer available to download. To execute the widget, build the widget's Docker image with the widget's Dockerfile (located in the widget's folder in the workflow's directory), provide the widget with your genome library directory, and manually execute it. STAR Fusion version 1.6 to 1.9 preferred. For more information about STAR Fusion, refer to the project's GitHub page [here](https://github.com/STAR-Fusion/STAR-Fusion).
+
+### GDC_mRNA_multi_dr32chr22
+GDC Data Release v32 mRNA-Seq workflow isolated to chromosome 22 genome files, as seen in Figure 2c.
+
+**NOTE**: Gene Fusion widgets (Arriba and STAR Fusion) are disabled as the default.
+
 ### GDC_mRNA_multi_dr32_bam_CRDC
 mRNA-Seq analysis workflow with Jupyter notebook analysis at the end, as seen in Figure 3. Notebook in this workflow is the [GDC vs GTEx compare](###GDC-vs-GTEx-compare) notebook.
 
