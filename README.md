@@ -1,5 +1,6 @@
 # GDC Genomic Workflows
-This repository contains data files, outputs, Jupyter notebooks, and Biodepot-workflow-builder (Bwb) workflows mentioned in the CRDC paper.
+This repository contains data files, outputs, Jupyter notebooks, and Biodepot-workflow-builder (Bwb) workflows mentioned in the following pre-print:
+Accessible, interactive and cloud-enabled genomic workflows integrated with the NCI Genomic Data Commons. Ling-Hong Hung, Bryce Fukuda, Robert Schmitz, Varik Hoang, Wes Lloyd, Ka Yee Yeung. https://doi.org/10.1101/2022.08.11.503660
 
 ## Bwb workflows
 
