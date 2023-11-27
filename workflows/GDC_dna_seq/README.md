@@ -4,21 +4,24 @@
 ## Implemented with the BioDepot-workflow-builder (Bwb)
 
 # Table of Contents
-* [Overview](#overview)
-  * [Reference genome](#reference-genome)
-  * [Workflow in the demo state](#workflow-in-the-demo-state)
-  * [Modifying workflow for alternate samples](#modifying-workflow-for-alternate-samples)
-  * [Example: Using samples from GEN3 and GDC](#example-using-samples-from-gen3-and-gdc)
-  * [Modifying workflow for alternate reference genome](#modifying-workflow-for-alternate-reference-genome)
-  * [Archive and cleanup output files](#archive-and-cleanup-output-files)
-* [Appendix](#appendix)
-  * [Download widgets](#download-widgets)
-    * [gcloud_download](#gcloud_download)
-    * [downloadURL](#downloadurl)
-    * [gen3_download](#gen3_download)
-  * [Common issues with workflows](#common-issues-with-workflows)
-  * [Software and hardware specifications](#software-and-hardware-specifications)
-* [References](#references)
+- [GDC DNA-Seq Pipeline](#gdc-dna-seq-pipeline)
+  - [Implemented with the BioDepot-workflow-builder (Bwb)](#implemented-with-the-biodepot-workflow-builder-bwb)
+- [Table of Contents](#table-of-contents)
+- [Overview](#overview)
+  - [Reference genome](#reference-genome)
+  - [Workflow in the demo state](#workflow-in-the-demo-state)
+  - [Modifying workflow for alternate samples](#modifying-workflow-for-alternate-samples)
+  - [Example: Using samples from GEN3 and GDC](#example-using-samples-from-gen3-and-gdc)
+  - [Modifying workflow for alternate reference genome](#modifying-workflow-for-alternate-reference-genome)
+  - [Archive and cleanup output files](#archive-and-cleanup-output-files)
+- [Appendix](#appendix)
+  - [Download widgets](#download-widgets)
+    - [gcloud\_download](#gcloud_download)
+    - [downloadURL](#downloadurl)
+    - [gen3\_download](#gen3_download)
+  - [Common issues with workflows](#common-issues-with-workflows)
+  - [Software and hardware specifications](#software-and-hardware-specifications)
+- [References](#references)
 
 # Overview
 The DNA-Seq Workflow is based off of the Genomic Data Commons documentation located here: [https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/DNA_Seq_Variant_Calling_Pipeline/](https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/DNA_Seq_Variant_Calling_Pipeline/)
@@ -125,13 +128,13 @@ GEN3 data commons and the GDC data portal are accessible via the _gen3_download_
 One of the biggest issues with the GDC workflow is that several tools have changed throughout the course of their life cycles. Often major revisions of tools will come with option changes. Certain options may be deprecated or deleted entirely. Sometimes option flags will be renamed or inputs will need to be passed in a different way. All of these things sound very minor but turn what could be a straightforward workflow into a several hour debugging session. The point is to use care when updating tool versions or widgets.
 
 ## Software and hardware specifications
-The GATK Germline workflow was tested on an AWS Elastic Cloud Compute (EC2)  instance with the following specifications:
+The workflow was tested on an AWS Elastic Cloud Compute (EC2)  instance with the following specifications:
 
 | Option | Value|
 | - | - |
 | Instance Type | r5d.2xlarge
 | Distribution | Ubuntu server 20.04
-| Disk space | 50GB
+| Disk space | 200GB
 | Memory | 64GB
 | vCPU | 8
 
