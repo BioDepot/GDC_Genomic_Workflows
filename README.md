@@ -1,9 +1,10 @@
-# GDC Genomic Workflows
+# Genomic Data Commons (GDC) Workflows
 
-This repository contains data files, outputs, Jupyter notebooks, and Biodepot-workflow-builder (Bwb) workflows mentioned in the following pre-print:
+This repository contains executable graphical workflows, data files, outputs, and Jupyter notebooks reported in the following pre-print:
+
 Accessible, interactive and cloud-enabled genomic workflows integrated with the NCI Genomic Data Commons. Ling-Hong Hung, Bryce Fukuda, Robert Schmitz, Varik Hoang, Wes Lloyd, Ka Yee Yeung. https://doi.org/10.1101/2022.08.11.503660
 
-## Bwb workflows
+## Cancer genomics workflows
 
 ### [GDC_mRNA_dr15plus](workflows/GDC_mRNA_dr15plus)
 
@@ -72,6 +73,10 @@ Old v15 HTSeq counts are not available on GDC anymore, but access to these files
 Comparison of the counts fro the three GTEx samples, gene read counts published on the GTEx Portal ([GTEx Analysis V8 (dbGaP Accession phs000424.v8.p2)](https://gtexportal.org/home/datasets)) vs reprocessed counts from running the [GDC_mRNA_multi_dr32_bam_CRDC](workflows/GDC_mRNA_multi_dr32_bam_CRDC) workflow.
 
 Relative change and differential expression analyses are included.
+
+## Biodepot-workflow-builder (Bwb)
+All graphical workflows are implemented in the Bwb platform. To learn more about the Bwb platform, please refer to https://github.com/BioDepot/BioDepot-workflow-builder
+
 
 ## Troubleshooting
 
