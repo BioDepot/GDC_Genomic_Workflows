@@ -37,14 +37,6 @@ GDC DNA-Seq analysis workflow, as seen in Figure 4.
 A demonstration video for this workflow is seen here:
 [https://youtu.be/M7MCI83Q7_A](https://youtu.be/M7MCI83Q7_A)
 
-### [GATK_workflows](workflows/GATK_workflows)
-
-GATK workflow containing the Cromwell widget, as seen in Figure 5.
-
-### [toil_wgs_sanger](workflows/toil_wgs_sanger)
-
-WGS Variant Calling workflow using the Toil CWL widget, as seen in Figure 6.
-
 A demonstration video for this workflow is seen here:
 [https://youtu.be/XRdhJRvVecM](https://youtu.be/XRdhJRvVecM)
 
@@ -75,8 +67,8 @@ Comparison of the counts fro the three GTEx samples, gene read counts published 
 Relative change and differential expression analyses are included.
 
 ## Biodepot-workflow-builder (Bwb)
-All graphical workflows are implemented in the Bwb platform. To learn more about the Bwb platform, please refer to https://github.com/BioDepot/BioDepot-workflow-builder
 
+All graphical workflows are implemented in the Bwb platform. To learn more about the Bwb platform, please refer to https://github.com/BioDepot/BioDepot-workflow-builder
 
 ## Troubleshooting
 
